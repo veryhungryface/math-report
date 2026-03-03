@@ -1,6 +1,5 @@
-import { useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Trophy, ChevronDown } from 'lucide-react'
+import { Trophy } from 'lucide-react'
 import type { TestResult } from '../../data/diagnosticQuestions'
 
 interface TestCompleteProps {
@@ -10,13 +9,6 @@ interface TestCompleteProps {
 
 export default function TestComplete({ results, totalQuestions }: TestCompleteProps) {
   const correctCount = results.filter((r) => r.correct).length
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      document.getElementById('parent-summary')?.scrollIntoView({ behavior: 'smooth' })
-    }, 2000)
-    return () => clearTimeout(timer)
-  }, [])
 
   return (
     <motion.div
@@ -46,15 +38,9 @@ export default function TestComplete({ results, totalQuestions }: TestCompletePr
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
-        className="mt-10 flex flex-col items-center gap-2 text-navy-400"
+        className="mt-10 text-navy-400"
       >
-        <p className="text-sm">아래에서 진단 결과를 확인하세요</p>
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 1.5, ease: 'easeInOut' }}
-        >
-          <ChevronDown className="w-6 h-6" />
-        </motion.div>
+        <p className="text-sm">잠시 후 결과 페이지로 이동합니다</p>
       </motion.div>
     </motion.div>
   )

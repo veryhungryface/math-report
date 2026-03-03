@@ -1,6 +1,10 @@
 import { motion } from 'framer-motion'
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  onStartTest: () => void
+}
+
+export default function HeroSection({ onStartTest }: HeroSectionProps) {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-navy-950 overflow-hidden">
       {/* Animated background grid */}
@@ -52,8 +56,8 @@ export default function HeroSection() {
           Precision Diagnostic Engine for Math Learning
         </motion.p>
 
-        <motion.a
-          href="#report"
+        <motion.button
+          onClick={onStartTest}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5, ease: 'easeOut' }}
@@ -65,8 +69,8 @@ export default function HeroSection() {
             hover:shadow-[0_0_40px_rgba(59,130,246,0.5)]
             transition-shadow duration-300"
         >
-          진단 리포트 보기
-        </motion.a>
+          진단 테스트 시작하기
+        </motion.button>
       </div>
     </section>
   )

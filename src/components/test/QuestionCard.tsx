@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { cn } from '../../lib/cn'
 import MathRenderer from '../ui/MathRenderer'
 import AnswerOption from './AnswerOption'
-import FollowUpPanel from './FollowUpPanel'
+import FollowUpModal from './FollowUpModal'
 import type { DiagnosticQuestion, AxisType } from '../../data/diagnosticQuestions'
 
 interface QuestionCardProps {
@@ -93,14 +93,13 @@ export default function QuestionCard({
           ))}
         </div>
 
-        {showFollowUp && followUp && (
-          <FollowUpPanel
-            followUp={followUp}
-            followUpSelected={followUpSelected}
-            selectFollowUp={selectFollowUp}
-            nextQuestion={nextQuestion}
-          />
-        )}
+        <FollowUpModal
+          open={showFollowUp && !!followUp}
+          followUp={followUp}
+          followUpSelected={followUpSelected}
+          selectFollowUp={selectFollowUp}
+          nextQuestion={nextQuestion}
+        />
 
         {isRevealed && !isCorrect && !followUp && (
           <div className="mt-6 flex justify-center">
