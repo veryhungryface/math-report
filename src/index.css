@@ -1,0 +1,69 @@
+@import "tailwindcss";
+@import "katex/dist/katex.min.css";
+
+@theme {
+  --color-navy-950: #060E1A;
+  --color-navy-900: #0A1628;
+  --color-navy-800: #111D35;
+  --color-navy-700: #1A2744;
+  --color-navy-600: #243556;
+  --color-navy-500: #2E4372;
+  --color-navy-400: #4A6FA5;
+  --color-navy-300: #6B8FBF;
+  --color-navy-200: #9BB5D6;
+  --color-navy-100: #D0DFF0;
+  --color-navy-50: #EBF1F9;
+
+  --color-axis-concept: #3B82F6;
+  --color-axis-procedure: #8B5CF6;
+  --color-axis-expression: #EC4899;
+  --color-axis-strategy: #F59E0B;
+  --color-axis-habit: #10B981;
+  --color-axis-transfer: #06B6D4;
+
+  --color-risk-high: #EF4444;
+  --color-risk-medium: #F59E0B;
+  --color-risk-low: #10B981;
+
+  --font-sans: "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #060E1A;
+  color: #D0DFF0;
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0A1628;
+}
+::-webkit-scrollbar-thumb {
+  background: #243556;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2E4372;
+}
+
+/* KaTeX dark theme overrides */
+.katex {
+  color: inherit;
+}
+.katex .mord,
+.katex .mbin,
+.katex .mrel,
+.katex .mopen,
+.katex .mclose,
+.katex .mpunct,
+.katex .minner {
+  color: inherit;
+}
