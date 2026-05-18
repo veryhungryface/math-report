@@ -22,8 +22,8 @@ const tabMotion = {
 
 export default function App() {
   const test = useTestState()
-  const [activeTab, setActiveTab] = useState<TabId>('intro')
-  const [testCompleted, setTestCompleted] = useState(false)
+  const [activeTab, setActiveTab] = useState<TabId>('results')
+  const [testCompleted, setTestCompleted] = useState(true)
 
   const handleStartTest = useCallback(() => {
     test.startTest()
