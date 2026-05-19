@@ -18,15 +18,15 @@ export default function TestIntro({ beginQuestions }: TestIntroProps) {
       </div>
 
       <h2 className="text-3xl font-bold text-navy-50 mb-3">
-        수학 진단 테스트
+        Math Diagnostic Test
       </h2>
 
       <p className="text-lg text-navy-300 mb-2">
-        초등 6학년 &rarr; 중학교 1학년 준비도를 확인합니다
+        Check your readiness for the Grade 6 &rarr; Grade 7 transition
       </p>
 
       <p className="text-sm text-navy-400 mb-10">
-        10문항 &middot; 약 5분 소요 &middot; 오답 시 추가 진단
+        10 questions &middot; about 5 minutes &middot; follow-up on wrong answers
       </p>
 
       <motion.button
@@ -35,7 +35,7 @@ export default function TestIntro({ beginQuestions }: TestIntroProps) {
         onClick={beginQuestions}
         className="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-400 to-cyan-400 text-white font-semibold text-lg shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-shadow"
       >
-        테스트 시작하기
+        Start Test
       </motion.button>
     </motion.div>
   )

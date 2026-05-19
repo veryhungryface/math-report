@@ -10,11 +10,11 @@ import {
 import Section from '../ui/Section'
 
 const nodes = [
-  { label: '정밀진단', Icon: Brain, color: '#3B82F6' },
-  { label: '처방', Icon: ClipboardList, color: '#8B5CF6' },
-  { label: '개인화 훈련', Icon: Dumbbell, color: '#EC4899' },
-  { label: '평가/재진단', Icon: CheckCircle, color: '#F59E0B' },
-  { label: '모델 업데이트', Icon: RefreshCw, color: '#06B6D4' },
+  { label: 'Diagnose', Icon: Brain, color: '#3B82F6' },
+  { label: 'Prescribe', Icon: ClipboardList, color: '#8B5CF6' },
+  { label: 'Personalized Practice', Icon: Dumbbell, color: '#EC4899' },
+  { label: 'Re-assess', Icon: CheckCircle, color: '#F59E0B' },
+  { label: 'Update Model', Icon: RefreshCw, color: '#06B6D4' },
 ]
 
 // Place 5 nodes evenly on a circle (start from top, -90deg offset)
@@ -34,10 +34,10 @@ export default function LearningFlywheel() {
   return (
     <Section id="flywheel">
       <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 text-center">
-        성적상승 엔진
+        Performance Growth Engine
       </h2>
       <p className="text-navy-300 text-center mb-16 text-lg">
-        데이터가 쌓일수록 진단은 정밀해지고, 성적은 올라갑니다
+        The more data we gather, the more precise the diagnosis — and the higher the scores
       </p>
 
       <div
@@ -90,9 +90,9 @@ export default function LearningFlywheel() {
             transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
           >
             <span className="text-sm font-bold text-blue-400 leading-tight">
-              성적상승
+              Growth
               <br />
-              엔진
+              Engine
             </span>
           </motion.div>
         </div>

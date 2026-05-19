@@ -43,12 +43,12 @@ export interface ParentSummaryData {
 
 // ─── 10 Questions ────────────────────────────────────────
 export const diagnosticQuestions: DiagnosticQuestion[] = [
-  // Q1 - 분수 덧셈 (통분) - 절차
+  // Q1 - Adding fractions (common denominators) - procedure
   {
     id: 1,
     axis: 'procedure',
-    axisLabel: '절차',
-    topic: '분수 덧셈 (통분)',
+    axisLabel: 'Procedure',
+    topic: 'Adding Fractions (Common Denominators)',
     question: '\\dfrac{2}{3} + \\dfrac{1}{4} = ?',
     choices: [
       '\\dfrac{11}{12}',
@@ -59,152 +59,152 @@ export const diagnosticQuestions: DiagnosticQuestion[] = [
     correctAnswer: 0,
     followUps: {
       1: {
-        errorDiagnosis: '분모끼리 더하는 통분 절차 오류 의심',
-        followUpQuestion: '\\dfrac{1}{2} + \\dfrac{1}{3} 을 계산하려면 공통 분모는?',
+        errorDiagnosis: 'Likely error: adding denominators instead of finding a common denominator',
+        followUpQuestion: 'To compute \\dfrac{1}{2} + \\dfrac{1}{3}, what is the common denominator?',
         followUpChoices: ['5', '6', '2', '3'],
         followUpAnswer: 1,
       },
       2: {
-        errorDiagnosis: '분자를 통분 없이 그대로 더한 오류',
-        followUpQuestion: '\\dfrac{1}{4} 를 분모 12로 바꾸면 분자는?',
+        errorDiagnosis: 'Added numerators without first finding a common denominator',
+        followUpQuestion: 'Rewrite \\dfrac{1}{4} with denominator 12. The new numerator is?',
         followUpChoices: ['1', '2', '3', '4'],
         followUpAnswer: 2,
       },
       3: {
-        errorDiagnosis: '통분은 했으나 분자 계산 오류',
-        followUpQuestion: '\\dfrac{8}{12} + \\dfrac{3}{12} 의 분자는?',
+        errorDiagnosis: 'Found a common denominator but made an error adding numerators',
+        followUpQuestion: 'The numerator of \\dfrac{8}{12} + \\dfrac{3}{12} is?',
         followUpChoices: ['8', '11', '12', '24'],
         followUpAnswer: 1,
       },
     },
   },
-  // Q2 - 소수 나눗셈 - 개념
+  // Q2 - Decimal division - concept
   {
     id: 2,
     axis: 'concept',
-    axisLabel: '개념',
-    topic: '소수 나눗셈',
+    axisLabel: 'Concept',
+    topic: 'Decimal Division',
     question: '3.6 \\div 0.4 = ?',
     choices: ['0.9', '9', '36', '90'],
     correctAnswer: 1,
     followUps: {
       0: {
-        errorDiagnosis: '소수점 위치 이동 개념 부족',
+        errorDiagnosis: 'Weak understanding of shifting the decimal point',
         followUpQuestion: '0.4 \\times 10 = ?',
         followUpChoices: ['0.04', '0.4', '4', '40'],
         followUpAnswer: 2,
       },
       2: {
-        errorDiagnosis: '소수점 제거 후 나눗셈 실수',
+        errorDiagnosis: 'Removed the decimal but then divided incorrectly',
         followUpQuestion: '36 \\div 4 = ?',
         followUpChoices: ['4', '8', '9', '12'],
         followUpAnswer: 2,
       },
       3: {
-        errorDiagnosis: '자릿수 이동 과잉 적용',
+        errorDiagnosis: 'Shifted the decimal too far (over-applied)',
         followUpQuestion: '3.6 \\times 10 = ?',
         followUpChoices: ['0.36', '3.6', '36', '360'],
         followUpAnswer: 2,
       },
     },
   },
-  // Q3 - 음수의 곱셈 (부호 규칙) - 개념
+  // Q3 - Multiplication with negatives (sign rules) - concept
   {
     id: 3,
     axis: 'concept',
-    axisLabel: '개념',
-    topic: '음수의 곱셈',
+    axisLabel: 'Concept',
+    topic: 'Multiplying Negative Numbers',
     question: '(-3) \\times (-5) = ?',
     choices: ['-15', '-8', '8', '15'],
     correctAnswer: 3,
     followUps: {
       0: {
-        errorDiagnosis: '음수×음수=양수 부호 규칙 미이해',
-        followUpQuestion: '음수 \\times 음수의 결과 부호는?',
-        followUpChoices: ['항상 음수', '항상 양수', '0', '알 수 없다'],
+        errorDiagnosis: 'Sign rule misunderstanding: negative × negative = positive',
+        followUpQuestion: 'The sign of (negative) \\times (negative) is?',
+        followUpChoices: ['Always negative', 'Always positive', 'Zero', 'Cannot tell'],
         followUpAnswer: 1,
       },
       1: {
-        errorDiagnosis: '곱셈을 덧셈으로 혼동',
+        errorDiagnosis: 'Confused multiplication with addition',
         followUpQuestion: '(-3) + (-5) = ?',
         followUpChoices: ['-8', '-2', '2', '8'],
         followUpAnswer: 0,
       },
       2: {
-        errorDiagnosis: '곱셈을 덧셈 절댓값으로 혼동',
+        errorDiagnosis: 'Mixed up multiplication with absolute-value addition',
         followUpQuestion: '3 \\times 5 = ?',
         followUpChoices: ['8', '10', '15', '35'],
         followUpAnswer: 2,
       },
     },
   },
-  // Q4 - 비례식 (문장제) - 표현
+  // Q4 - Proportions (word problem) - expression
   {
     id: 4,
     axis: 'expression',
-    axisLabel: '표현',
-    topic: '비례식 (문장제)',
-    question: '사과 5개에 2000원일 때, 사과 12개의 가격은?',
-    choices: ['4000원', '4400원', '4800원', '6000원'],
+    axisLabel: 'Representation',
+    topic: 'Proportions (Word Problem)',
+    question: 'If 5 apples cost \\$2.00, how much do 12 apples cost?',
+    choices: ['\\$4.00', '\\$4.40', '\\$4.80', '\\$6.00'],
     correctAnswer: 2,
     followUps: {
       0: {
-        errorDiagnosis: '비례 관계 설정 오류 (2배로 잘못 계산)',
-        followUpQuestion: '사과 1개의 가격은?\\ (5개에 2000원)',
-        followUpChoices: ['200원', '300원', '400원', '500원'],
+        errorDiagnosis: 'Set up the proportion wrong (doubled instead of scaling)',
+        followUpQuestion: 'What is the price of one apple? (5 apples cost \\$2.00)',
+        followUpChoices: ['\\$0.20', '\\$0.30', '\\$0.40', '\\$0.50'],
         followUpAnswer: 2,
       },
       1: {
-        errorDiagnosis: '곱셈 계산 오류',
-        followUpQuestion: '400 \\times 12 = ?',
-        followUpChoices: ['4400', '4600', '4800', '5200'],
+        errorDiagnosis: 'Multiplication error',
+        followUpQuestion: '0.40 \\times 12 = ?',
+        followUpChoices: ['4.40', '4.60', '4.80', '5.20'],
         followUpAnswer: 2,
       },
       3: {
-        errorDiagnosis: '비례식을 반올림하여 근사 처리',
-        followUpQuestion: '2000 \\div 5 의 정확한 값은?',
-        followUpChoices: ['300', '400', '450', '500'],
+        errorDiagnosis: 'Rounded the proportion to an approximate value',
+        followUpQuestion: 'The exact value of 2.00 \\div 5 is?',
+        followUpChoices: ['0.30', '0.40', '0.45', '0.50'],
         followUpAnswer: 1,
       },
     },
   },
-  // Q5 - 일차방정식 - 절차
+  // Q5 - Linear equations - procedure
   {
     id: 5,
     axis: 'procedure',
-    axisLabel: '절차',
-    topic: '일차방정식',
-    question: '2x + 5 = 13 일 때, x = ?',
+    axisLabel: 'Procedure',
+    topic: 'Linear Equations',
+    question: 'If 2x + 5 = 13, then x = ?',
     choices: ['3', '4', '9', '6'],
     correctAnswer: 1,
     followUps: {
       0: {
-        errorDiagnosis: '양변 빼기 후 나눗셈 순서 오류',
+        errorDiagnosis: 'Wrong order: divided before subtracting from both sides',
         followUpQuestion: '13 - 5 = ?',
         followUpChoices: ['6', '7', '8', '9'],
         followUpAnswer: 2,
       },
       2: {
-        errorDiagnosis: '이항 없이 바로 나누기 시도',
-        followUpQuestion: '2x = 8 이면 x = ?',
+        errorDiagnosis: 'Divided without first moving the constant term',
+        followUpQuestion: 'If 2x = 8, then x = ?',
         followUpChoices: ['2', '4', '6', '8'],
         followUpAnswer: 1,
       },
       3: {
-        errorDiagnosis: '상수항 이항 오류 (13+5)',
-        followUpQuestion: '방정식에서 +5를 이항하면 부호는?',
+        errorDiagnosis: 'Sign error when moving the constant term (used 13+5)',
+        followUpQuestion: 'When +5 is moved to the other side, the sign becomes?',
         followUpChoices: ['+5', '-5', '×5', '÷5'],
         followUpAnswer: 1,
       },
     },
   },
-  // Q6 - 문장→식 전환 - 표현
+  // Q6 - Translating words to equations - expression
   {
     id: 6,
     axis: 'expression',
-    axisLabel: '표현',
-    topic: '문장→식 전환',
-    question: '"어떤 수의 3배에서 7을 빼면 20이다." 를 식으로 쓰면?',
+    axisLabel: 'Representation',
+    topic: 'Translating Words to Equations',
+    question: '"Seven less than three times a number equals 20." Which equation matches?',
     choices: [
       '3x - 7 = 20',
       '3(x - 7) = 20',
@@ -214,31 +214,31 @@ export const diagnosticQuestions: DiagnosticQuestion[] = [
     correctAnswer: 0,
     followUps: {
       1: {
-        errorDiagnosis: '연산 순서(괄호) 적용 오류',
-        followUpQuestion: '"3배에서 7을 빼면"에서 먼저 하는 연산은?',
-        followUpChoices: ['빼기', '3배', '더하기', '나누기'],
+        errorDiagnosis: 'Order-of-operations error (misplaced parentheses)',
+        followUpQuestion: 'In "three times a number, minus 7", which operation comes first?',
+        followUpChoices: ['Subtraction', 'Multiplying by 3', 'Addition', 'Division'],
         followUpAnswer: 1,
       },
       2: {
-        errorDiagnosis: '"빼면"을 "더하면"으로 잘못 전환',
-        followUpQuestion: '"A에서 B를 빼면"을 식으로 쓰면?',
+        errorDiagnosis: 'Confused "minus" with "plus"',
+        followUpQuestion: '"A minus B" written as an expression is?',
         followUpChoices: ['A + B', 'A - B', 'B - A', 'A × B'],
         followUpAnswer: 1,
       },
       3: {
-        errorDiagnosis: '빼기를 더하기로 전환 오류',
-        followUpQuestion: '3x - 7 과 3x + 7 중 "빼면"에 맞는 것은?',
-        followUpChoices: ['3x - 7', '3x + 7', '둘 다', '없다'],
+        errorDiagnosis: 'Replaced subtraction with addition',
+        followUpQuestion: 'Between 3x - 7 and 3x + 7, which matches "minus 7"?',
+        followUpChoices: ['3x - 7', '3x + 7', 'Both', 'Neither'],
         followUpAnswer: 0,
       },
     },
   },
-  // Q7 - 분배법칙 전개 - 습관
+  // Q7 - Distributive property - habit
   {
     id: 7,
     axis: 'habit',
-    axisLabel: '습관',
-    topic: '분배법칙 전개',
+    axisLabel: 'Habit',
+    topic: 'Distributive Property',
     question: '3(2x + 4) = ?',
     choices: [
       '6x + 12',
@@ -249,80 +249,80 @@ export const diagnosticQuestions: DiagnosticQuestion[] = [
     correctAnswer: 0,
     followUps: {
       1: {
-        errorDiagnosis: '분배법칙에서 상수항 누락 (3×4 생략)',
+        errorDiagnosis: 'Forgot to distribute to the constant term (skipped 3×4)',
         followUpQuestion: '3 \\times 4 = ?',
         followUpChoices: ['7', '10', '12', '34'],
         followUpAnswer: 2,
       },
       2: {
-        errorDiagnosis: '분배 대신 각 항에 더하기 적용',
-        followUpQuestion: '분배법칙: a(b+c) = ?',
+        errorDiagnosis: 'Added terms instead of distributing',
+        followUpQuestion: 'Distributive property: a(b+c) = ?',
         followUpChoices: ['a+b+c', 'ab+c', 'ab+ac', 'a+bc'],
         followUpAnswer: 2,
       },
       3: {
-        errorDiagnosis: 'x 항에 분배 누락',
+        errorDiagnosis: 'Forgot to distribute to the x-term',
         followUpQuestion: '3 \\times 2x = ?',
         followUpChoices: ['2x', '3x', '5x', '6x'],
         followUpAnswer: 3,
       },
     },
   },
-  // Q8 - 삼각형 내각의 합 - 개념
+  // Q8 - Triangle angle sum - concept
   {
     id: 8,
     axis: 'concept',
-    axisLabel: '개념',
-    topic: '삼각형 내각의 합',
-    question: '삼각형의 세 각이 50°,\\, 70°,\\, x° 일 때, x = ?',
+    axisLabel: 'Concept',
+    topic: 'Triangle Angle Sum',
+    question: 'The three angles of a triangle are 50°,\\, 70°,\\, x°. Find x.',
     choices: ['40', '50', '60', '80'],
     correctAnswer: 2,
     followUps: {
       0: {
-        errorDiagnosis: '내각의 합을 360°로 기억하는 오류',
-        followUpQuestion: '삼각형의 세 내각의 합은?',
+        errorDiagnosis: 'Mis-remembered the angle sum as 360°',
+        followUpQuestion: 'The sum of the interior angles of a triangle is?',
         followUpChoices: ['90°', '180°', '270°', '360°'],
         followUpAnswer: 1,
       },
       1: {
-        errorDiagnosis: '뺄셈 계산 오류',
+        errorDiagnosis: 'Subtraction error',
         followUpQuestion: '180 - 50 - 70 = ?',
         followUpChoices: ['40', '50', '60', '70'],
         followUpAnswer: 2,
       },
       3: {
-        errorDiagnosis: '50+70 계산 오류 (100으로 잘못 계산)',
+        errorDiagnosis: 'Addition error: 50+70 computed as 100',
         followUpQuestion: '50 + 70 = ?',
         followUpChoices: ['100', '110', '120', '130'],
         followUpAnswer: 2,
       },
     },
   },
-  // Q9 - 비율/백분율 - 전이
+  // Q9 - Ratios and percentages - transfer
   {
     id: 9,
     axis: 'transfer',
-    axisLabel: '전이',
-    topic: '비율과 백분율',
-    question: '학생 40명 중 14명이 안경을 쓴다면, 백분율은?',
+    axisLabel: 'Transfer',
+    topic: 'Ratios and Percentages',
+    question: 'If 14 of 40 students wear glasses, what percentage is that?',
     choices: ['14%', '28%', '35%', '40%'],
     correctAnswer: 2,
     followUps: {
       0: {
-        errorDiagnosis: '비율 계산 없이 숫자 그대로 사용',
-        followUpQuestion: '백분율은 어떤 수를 기준으로 나누나요?',
+        errorDiagnosis: 'Used the raw count without converting to a ratio',
+        followUpQuestion: 'A percentage is calculated relative to which number?',
         followUpChoices: ['14', '40', '54', '100'],
         followUpAnswer: 1,
       },
       1: {
-        errorDiagnosis: '14÷40 대신 14÷50으로 계산',
+        errorDiagnosis: 'Divided by 50 instead of 40',
         followUpQuestion: '14 \\div 40 = ?',
         followUpChoices: ['0.28', '0.35', '0.40', '0.54'],
         followUpAnswer: 1,
       },
       3: {
-        errorDiagnosis: '분모와 분자를 뒤바꿔 계산',
-        followUpQuestion: '"40명 중 14명"을 분수로 쓰면?',
+        errorDiagnosis: 'Swapped numerator and denominator',
+        followUpQuestion: 'Write "14 out of 40" as a fraction.',
         followUpChoices: [
           '\\dfrac{40}{14}',
           '\\dfrac{14}{40}',
@@ -333,31 +333,31 @@ export const diagnosticQuestions: DiagnosticQuestion[] = [
       },
     },
   },
-  // Q10 - 분수 포함 방정식 - 전략
+  // Q10 - Equations with fractions - strategy
   {
     id: 10,
     axis: 'strategy',
-    axisLabel: '전략',
-    topic: '분수 포함 방정식',
-    question: '\\dfrac{x}{3} + 4 = 10 일 때, x = ?',
+    axisLabel: 'Strategy',
+    topic: 'Equations with Fractions',
+    question: 'If \\dfrac{x}{3} + 4 = 10, then x = ?',
     choices: ['2', '6', '14', '18'],
     correctAnswer: 3,
     followUps: {
       0: {
-        errorDiagnosis: '10-4 후 3으로 나누기 (역순 적용)',
-        followUpQuestion: '\\dfrac{x}{3} = 6 이면 x = ?',
+        errorDiagnosis: 'Reversed the order: divided by 3 after subtracting',
+        followUpQuestion: 'If \\dfrac{x}{3} = 6, then x = ?',
         followUpChoices: ['2', '3', '9', '18'],
         followUpAnswer: 3,
       },
       1: {
-        errorDiagnosis: '×3 단계 누락',
-        followUpQuestion: '\\dfrac{x}{3} = 6 을 풀려면 양변에?',
+        errorDiagnosis: 'Forgot to multiply by 3',
+        followUpQuestion: 'To solve \\dfrac{x}{3} = 6, do what to both sides?',
         followUpChoices: ['÷3', '×3', '+3', '-3'],
         followUpAnswer: 1,
       },
       2: {
-        errorDiagnosis: '이항 부호 오류 (+4를 +4로 이항)',
-        followUpQuestion: '+4를 이항하면 부호는?',
+        errorDiagnosis: 'Sign error when moving the constant (+4 moved as +4)',
+        followUpQuestion: 'When +4 is moved to the other side, the sign becomes?',
         followUpChoices: ['+4', '-4', '×4', '÷4'],
         followUpAnswer: 1,
       },
@@ -367,12 +367,12 @@ export const diagnosticQuestions: DiagnosticQuestion[] = [
 
 // ─── Parent Summary Generator ────────────────────────────
 const axisNames: Record<AxisType, string> = {
-  concept: '개념 이해',
-  procedure: '절차 수행',
-  expression: '표현 전환',
-  strategy: '전략 선택',
-  habit: '학습 습관',
-  transfer: '전이 적용',
+  concept: 'Concepts',
+  procedure: 'Procedures',
+  expression: 'Representation',
+  strategy: 'Strategy',
+  habit: 'Habits',
+  transfer: 'Transfer',
 }
 
 export function generateParentSummary(results: TestResult[]): ParentSummaryData {
@@ -384,13 +384,13 @@ export function generateParentSummary(results: TestResult[]): ParentSummaryData 
   let headline: string
   if (percentage >= 80) {
     level = 'green'
-    headline = '중학교 수학 준비가 잘 되어 있어요!'
+    headline = 'Well prepared for middle-school math!'
   } else if (percentage >= 50) {
     level = 'yellow'
-    headline = '기초는 있지만 몇 가지 보강이 필요해요'
+    headline = 'A solid foundation, but a few areas need shoring up'
   } else {
     level = 'red'
-    headline = '핵심 기초부터 다시 짚어야 해요'
+    headline = 'Core fundamentals need to be revisited'
   }
 
   // Group by axis
@@ -431,12 +431,12 @@ export function generateParentSummary(results: TestResult[]): ParentSummaryData 
 
   // Parent tips based on weaknesses
   const tipMap: Record<AxisType, string> = {
-    concept: '교과서 개념 설명을 함께 읽고 "왜?"라고 질문해 주세요.',
-    procedure: '계산 연습 시 풀이 과정을 소리 내어 말하게 해 주세요.',
-    expression: '문장제 문제를 함께 읽고 "식으로 어떻게 쓸까?" 대화해 주세요.',
-    strategy: '여러 풀이 방법을 비교해 보는 연습을 격려해 주세요.',
-    habit: '매일 10분씩 꾸준히 연습하는 루틴을 만들어 주세요.',
-    transfer: '일상생활 속 수학(장보기, 요리 등)을 함께 찾아보세요.',
+    concept: 'Read textbook explanations together and ask "why?" as you go.',
+    procedure: 'Have your child say each step aloud while practicing calculations.',
+    expression: 'Read word problems together and talk through how to set up the equation.',
+    strategy: 'Encourage comparing multiple solution approaches for the same problem.',
+    habit: 'Build a routine of 10 minutes of consistent daily practice.',
+    transfer: 'Look for everyday math together — grocery shopping, cooking, and more.',
   }
 
   const parentTips = weaknesses.slice(0, 3).map(
@@ -448,10 +448,10 @@ export function generateParentSummary(results: TestResult[]): ParentSummaryData 
 
   // Fill to 3 tips if not enough
   if (parentTips.length < 3) {
-    parentTips.push('하루 10분 수학 대화 시간을 만들어 보세요.')
+    parentTips.push('Carve out 10 minutes a day to talk about math together.')
   }
   if (parentTips.length < 3) {
-    parentTips.push('틀린 문제를 벌이 아닌 배움의 기회로 격려해 주세요.')
+    parentTips.push('Treat mistakes as learning opportunities, not something to punish.')
   }
 
   return {

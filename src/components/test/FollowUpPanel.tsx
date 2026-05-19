@@ -34,7 +34,7 @@ export default function FollowUpPanel({
         <p className="text-sm text-amber-200">{followUp.errorDiagnosis}</p>
       </div>
 
-      <p className="text-sm text-navy-300 mb-3 font-medium">추가 진단 문항</p>
+      <p className="text-sm text-navy-300 mb-3 font-medium">Follow-up Question</p>
 
       <div className="mb-4 bg-navy-900/50 rounded-xl p-4">
         <MathRenderer math={followUp.followUpQuestion} displayMode />
@@ -91,13 +91,13 @@ export default function FollowUpPanel({
           className="flex flex-col items-center gap-3"
         >
           <p className={cn('text-sm font-medium', isCorrect ? 'text-emerald-400' : 'text-red-400')}>
-            {isCorrect ? '정답입니다!' : '아쉽지만 틀렸습니다'}
+            {isCorrect ? 'Correct!' : 'Not quite — incorrect'}
           </p>
           <button
             onClick={nextQuestion}
             className="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-400 to-cyan-400 text-white font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-shadow"
           >
-            다음 문항
+            Next Question
           </button>
         </motion.div>
       )}

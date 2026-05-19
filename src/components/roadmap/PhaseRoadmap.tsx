@@ -10,7 +10,7 @@ export default function PhaseRoadmap() {
   return (
     <Section id="roadmap">
       <h2 className="text-3xl md:text-4xl font-bold text-white mb-14 text-center">
-        로드맵
+        Roadmap
       </h2>
 
       {/* Horizontal timeline */}

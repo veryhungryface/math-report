@@ -11,10 +11,10 @@ export default function ErrorPatternChart() {
     <div ref={ref} className="rounded-2xl bg-navy-800/80 border border-navy-600/50 p-6">
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h4 className="text-sm font-semibold text-navy-200">오류 패턴 분포</h4>
-          <p className="text-xs text-navy-400 mt-0.5">6축 기반 오류 원인 분해</p>
+          <h4 className="text-sm font-semibold text-navy-200">Error Pattern Distribution</h4>
+          <p className="text-xs text-navy-400 mt-0.5">Six-axis error cause decomposition</p>
         </div>
-        <span className="text-[11px] text-navy-500">25문항 분석 기반</span>
+        <span className="text-[11px] text-navy-500">Based on 25 items</span>
       </div>
 
       <div className="space-y-4">
@@ -27,7 +27,7 @@ export default function ErrorPatternChart() {
                 <span className="text-[10px] text-navy-500">{pattern.nameEn}</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-xs text-navy-400">{pattern.count}건</span>
+                <span className="text-xs text-navy-400">{pattern.count}</span>
                 <span className="text-sm font-semibold text-white w-10 text-right">{pattern.percentage}%</span>
               </div>
             </div>
@@ -53,11 +53,11 @@ export default function ErrorPatternChart() {
 
       <div className="mt-5 pt-4 border-t border-navy-700/50 flex items-center justify-between">
         <p className="text-[11px] text-navy-500">
-          절차 오류가 전체의 32%로 가장 높은 비율 — 최우선 교정 대상
+          Procedural errors lead at 32% — top remediation priority
         </p>
         <div className="flex items-center gap-1 text-[10px] text-navy-500">
           <span className="w-1.5 h-1.5 rounded-full bg-navy-500" />
-          풀이 시간·수정 패턴 포함
+          Includes time & edit patterns
         </div>
       </div>
     </div>

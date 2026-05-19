@@ -26,12 +26,12 @@ export default function TestComplete({ results, totalQuestions }: TestCompletePr
         <Trophy className="w-10 h-10 text-white" />
       </motion.div>
 
-      <h2 className="text-3xl font-bold text-navy-50 mb-4">테스트 완료!</h2>
+      <h2 className="text-3xl font-bold text-navy-50 mb-4">Test Complete!</h2>
 
       <p className="text-xl text-navy-200 mb-2">
         <span className="text-2xl font-bold text-white">{correctCount}</span>
         <span className="text-navy-400"> / {totalQuestions}</span>
-        {' '}문항 정답
+        {' '}correct
       </p>
 
       <motion.div
@@ -40,7 +40,7 @@ export default function TestComplete({ results, totalQuestions }: TestCompletePr
         transition={{ delay: 1 }}
         className="mt-10 text-navy-400"
       >
-        <p className="text-sm">잠시 후 결과 페이지로 이동합니다</p>
+        <p className="text-sm">Redirecting to your results...</p>
       </motion.div>
     </motion.div>
   )

@@ -10,8 +10,8 @@ export default function PrescriptionPlan() {
   return (
     <div ref={ref} className="rounded-2xl bg-navy-800/80 border border-navy-600/50 p-6 h-full">
       <div className="mb-5">
-        <h4 className="text-sm font-semibold text-navy-200">4주 맞춤 처방 플랜</h4>
-        <p className="text-xs text-navy-400 mt-0.5">진단 결과 기반 자동 생성</p>
+        <h4 className="text-sm font-semibold text-navy-200">4-Week Custom Prescription</h4>
+        <p className="text-xs text-navy-400 mt-0.5">Auto-generated from diagnostic results</p>
       </div>
 
       <div className="space-y-3">
@@ -50,9 +50,9 @@ export default function PrescriptionPlan() {
                 </div>
                 <p className="text-xs text-navy-300 mb-2">{week.topic}</p>
                 <div className="flex items-center gap-3 text-[11px] text-navy-400">
-                  <span>매일 {week.dailyMinutes}분</span>
+                  <span>{week.dailyMinutes} min / day</span>
                   <span className="w-1 h-1 rounded-full bg-navy-600" />
-                  <span>{week.dailyItems}문항/일</span>
+                  <span>{week.dailyItems} items / day</span>
                 </div>
               </div>
             </div>
@@ -62,9 +62,9 @@ export default function PrescriptionPlan() {
 
       {/* Scaffold progression */}
       <div className="mt-4 pt-4 border-t border-navy-700/50">
-        <p className="text-[10px] text-navy-500 mb-2">학습 단계 진행</p>
+        <p className="text-[10px] text-navy-500 mb-2">Learning Stage Progression</p>
         <div className="flex items-center gap-1 text-[11px]">
-          {['예제', '유사', '변형', '혼합', '시험형'].map((stage, i) => (
+          {['Example', 'Similar', 'Variant', 'Mixed', 'Test'].map((stage, i) => (
             <div key={stage} className="flex items-center gap-1">
               <span className={`px-2 py-0.5 rounded ${i <= 1 ? 'bg-red-500/15 text-red-400' : i <= 2 ? 'bg-amber-500/15 text-amber-400' : i <= 3 ? 'bg-blue-500/15 text-blue-400' : 'bg-emerald-500/15 text-emerald-400'}`}>
                 {stage}

@@ -51,7 +51,7 @@ export default function ReadinessScore() {
 
   return (
     <div ref={ref} className="flex flex-col items-center justify-center rounded-2xl bg-navy-800/80 border border-navy-600/50 p-6 h-full">
-      <p className="text-sm text-navy-400 mb-4 font-medium">중등 준비도</p>
+      <p className="text-sm text-navy-400 mb-4 font-medium">Middle School Readiness</p>
 
       <div className="relative w-48 h-48 mb-4">
         <svg viewBox="0 0 200 200" className="w-full h-full -rotate-90">
@@ -89,11 +89,11 @@ export default function ReadinessScore() {
 
       <div className="w-full grid grid-cols-2 gap-3">
         <div className="text-center rounded-lg bg-navy-700/50 py-2 px-3">
-          <p className="text-xs text-navy-400">동학년 평균</p>
+          <p className="text-xs text-navy-400">Peer Average</p>
           <p className="text-lg font-semibold text-white">{peerAverage}</p>
         </div>
         <div className="text-center rounded-lg bg-navy-700/50 py-2 px-3">
-          <p className="text-xs text-navy-400">상위</p>
+          <p className="text-xs text-navy-400">Top</p>
           <p className="text-lg font-semibold text-white">{percentile}%</p>
         </div>
       </div>

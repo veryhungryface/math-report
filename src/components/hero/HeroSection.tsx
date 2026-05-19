@@ -34,7 +34,7 @@ export default function HeroSection({ onStartTest }: HeroSectionProps) {
           className="text-6xl md:text-8xl font-extrabold tracking-tight mb-6"
         >
           <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            수학 MRI
+            Math MRI
           </span>
         </motion.h1>
 
@@ -44,7 +44,7 @@ export default function HeroSection({ onStartTest }: HeroSectionProps) {
           transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
           className="text-xl md:text-2xl text-navy-200 font-medium mb-3"
         >
-          정밀 진단. 원인 분해. 성적 상승.
+          Precision diagnosis. Root-cause analysis. Higher scores.
         </motion.p>
 
         <motion.p
@@ -69,7 +69,7 @@ export default function HeroSection({ onStartTest }: HeroSectionProps) {
             hover:shadow-[0_0_40px_rgba(59,130,246,0.5)]
             transition-shadow duration-300"
         >
-          진단 테스트 시작하기
+          Start Diagnostic Test
         </motion.button>
       </div>
     </section>

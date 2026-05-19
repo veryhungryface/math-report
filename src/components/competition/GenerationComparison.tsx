@@ -10,10 +10,10 @@ export default function GenerationComparison() {
   return (
     <Section id="competition">
       <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 text-center">
-        진단 기술의 진화
+        The Evolution of Diagnostic Tech
       </h2>
       <p className="text-navy-300 text-center mb-14 text-lg">
-        4세대 진단으로 시장의 빈자리를 채웁니다
+        4th-generation diagnosis fills the gap in today's market
       </p>
 
       <div

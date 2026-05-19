@@ -24,7 +24,7 @@ export default function SixAxisRadar() {
             tick={{ fill: '#9BB5D6', fontSize: 14, fontWeight: 500 }}
           />
           <Radar
-            name="진단 점수"
+            name="Diagnostic Score"
             dataKey="value"
             stroke="#3B82F6"
             fill="#3B82F6"

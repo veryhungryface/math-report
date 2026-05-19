@@ -7,15 +7,15 @@ import Card from '../ui/Card'
 const painPoints = [
   {
     dot: 'bg-red-500',
-    text: '학생은 무엇을 모르는지 모른 채 문제풀이만 누적',
+    text: 'Students accumulate practice without knowing what they actually don\'t understand',
   },
   {
     dot: 'bg-amber-500',
-    text: '성취도 격차의 핵심은 콘텐츠 부족이 아니라 진단·개입의 부재',
+    text: 'The real driver of achievement gaps is missing diagnosis and intervention — not a content shortage',
   },
   {
     dot: 'bg-red-500',
-    text: '기존 솔루션은 점수/단원 중심 → 학습자 상태 설명이 약함',
+    text: 'Existing solutions focus on scores and units — they fail to explain the learner\'s actual state',
   },
 ]
 
@@ -36,11 +36,11 @@ export default function ProblemStatement() {
   return (
     <Section id="problem">
       <h2 className="text-3xl md:text-4xl font-bold text-white mb-14 text-center">
-        왜{' '}
+        Why{' '}
         <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-          정밀 진단
+          Precision Diagnosis
         </span>
-        인가?
+        ?
       </h2>
 
       <div ref={ref} className="grid md:grid-cols-5 gap-8 items-start">
@@ -81,12 +81,13 @@ export default function ProblemStatement() {
               </span>
             </div>
             <blockquote className="text-xl md:text-2xl font-bold text-white leading-snug">
-              "문항은 재고가 아니라
+              "Questions aren't inventory —
               <br />
+              they're{' '}
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                센서
+                sensors
               </span>
-              다"
+              "
             </blockquote>
           </Card>
         </motion.div>

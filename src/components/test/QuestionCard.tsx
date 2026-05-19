@@ -107,7 +107,7 @@ export default function QuestionCard({
               onClick={nextQuestion}
               className="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-400 to-cyan-400 text-white font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-shadow"
             >
-              다음 문항
+              Next Question
             </button>
           </div>
         )}

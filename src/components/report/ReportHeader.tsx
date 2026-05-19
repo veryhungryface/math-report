@@ -11,7 +11,7 @@ export default function ReportHeader() {
             <FileText className="w-5 h-5 text-blue-400" />
           </div>
           <div>
-            <h3 className="text-xl font-bold text-white">Math MRI 정밀 진단 리포트</h3>
+            <h3 className="text-xl font-bold text-white">Math MRI Precision Report</h3>
             <p className="text-sm text-navy-300">Precision Diagnostic Report</p>
           </div>
         </div>
@@ -22,7 +22,7 @@ export default function ReportHeader() {
               <span className="text-sm">👤</span>
             </div>
             <div>
-              <p className="text-xs text-navy-400">학생</p>
+              <p className="text-xs text-navy-400">Student</p>
               <p className="text-sm font-semibold text-white">{mockStudent.name}</p>
             </div>
           </div>
@@ -31,7 +31,7 @@ export default function ReportHeader() {
               <BookOpen className="w-4 h-4 text-navy-300" />
             </div>
             <div>
-              <p className="text-xs text-navy-400">학년</p>
+              <p className="text-xs text-navy-400">Grade</p>
               <p className="text-sm font-semibold text-white">{mockStudent.grade}</p>
             </div>
           </div>
@@ -40,7 +40,7 @@ export default function ReportHeader() {
               <Calendar className="w-4 h-4 text-navy-300" />
             </div>
             <div>
-              <p className="text-xs text-navy-400">진단일</p>
+              <p className="text-xs text-navy-400">Date</p>
               <p className="text-sm font-semibold text-white">{mockStudent.diagnosisDate}</p>
             </div>
           </div>
@@ -49,7 +49,7 @@ export default function ReportHeader() {
               <Clock className="w-4 h-4 text-navy-300" />
             </div>
             <div>
-              <p className="text-xs text-navy-400">소요 시간</p>
+              <p className="text-xs text-navy-400">Duration</p>
               <p className="text-sm font-semibold text-white">{mockStudent.timeSpent}</p>
             </div>
           </div>
@@ -57,9 +57,9 @@ export default function ReportHeader() {
 
         <div className="mt-4 pt-4 border-t border-navy-600/50">
           <p className="text-xs text-navy-400">
-            진단 범위: <span className="text-navy-200">{mockStudent.scope}</span>
+            Scope: <span className="text-navy-200">{mockStudent.scope}</span>
             {' · '}
-            총 {mockStudent.totalItems}문항 분석
+            {mockStudent.totalItems} items analyzed
           </p>
         </div>
       </div>

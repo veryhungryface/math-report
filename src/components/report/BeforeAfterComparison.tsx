@@ -14,10 +14,10 @@ const radarData = sixAxes.map(axis => ({
 }))
 
 const metrics = [
-  { label: '준비도 점수', before: 67, after: 82, unit: '', better: 'up' as const },
-  { label: '위험 영역', before: 3, after: 1, unit: '개', better: 'down' as const },
-  { label: '절차 오류 재발률', before: 78, after: 25, unit: '%', better: 'down' as const },
-  { label: '전이 성공률', before: 32, after: 68, unit: '%', better: 'up' as const },
+  { label: 'Readiness Score', before: 67, after: 82, unit: '', better: 'up' as const },
+  { label: 'Risk Areas', before: 3, after: 1, unit: '', better: 'down' as const },
+  { label: 'Procedural Recurrence', before: 78, after: 25, unit: '%', better: 'down' as const },
+  { label: 'Transfer Success', before: 32, after: 68, unit: '%', better: 'up' as const },
 ]
 
 function AnimatedNum({ target, inView }: { target: number; inView: boolean }) {
@@ -44,8 +44,8 @@ export default function BeforeAfterComparison() {
   return (
     <div ref={ref} className="rounded-2xl bg-navy-800/80 border border-navy-600/50 p-6 h-full">
       <div className="mb-5">
-        <h4 className="text-sm font-semibold text-navy-200">Before / After 예상 비교</h4>
-        <p className="text-xs text-navy-400 mt-0.5">4주 처방 후 예상 변화</p>
+        <h4 className="text-sm font-semibold text-navy-200">Before / After Projection</h4>
+        <p className="text-xs text-navy-400 mt-0.5">Expected change after 4-week prescription</p>
       </div>
 
       {/* Radar chart */}
@@ -80,11 +80,11 @@ export default function BeforeAfterComparison() {
       <div className="flex items-center justify-center gap-6 mb-4 text-xs">
         <div className="flex items-center gap-1.5">
           <div className="w-3 h-0.5 bg-red-500 rounded" />
-          <span className="text-navy-400">진단 시점</span>
+          <span className="text-navy-400">At diagnosis</span>
         </div>
         <div className="flex items-center gap-1.5">
           <div className="w-3 h-0.5 bg-emerald-500 rounded" />
-          <span className="text-navy-400">4주 후 예상</span>
+          <span className="text-navy-400">Projected after 4 weeks</span>
         </div>
       </div>
 

@@ -39,12 +39,11 @@ export default function DiagnosticModel() {
   return (
     <Section id="diagnosis">
       <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 text-center">
-        6축 정밀 진단 모델
+        Six-Axis Precision Diagnostic Model
       </h2>
       <p className="text-navy-300 text-center mb-12 text-lg">
-        정답이 아닌{' '}
-        <span className="text-white font-semibold">'왜 막히는지'</span>를
-        분해합니다
+        We don't just look at right answers — we break down{' '}
+        <span className="text-white font-semibold">why students get stuck</span>
       </p>
 
       {/* Radar chart */}

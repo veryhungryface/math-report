@@ -10,10 +10,10 @@ interface Tab {
 }
 
 const tabs: Tab[] = [
-  { id: 'intro', label: '소개' },
-  { id: 'test', label: '진단 테스트' },
-  { id: 'results', label: '진단 결과' },
-  { id: 'learn-more', label: '더 알아보기' },
+  { id: 'intro', label: 'Intro' },
+  { id: 'test', label: 'Diagnostic Test' },
+  { id: 'results', label: 'Results' },
+  { id: 'learn-more', label: 'Learn More' },
 ]
 
 interface TabBarProps {
